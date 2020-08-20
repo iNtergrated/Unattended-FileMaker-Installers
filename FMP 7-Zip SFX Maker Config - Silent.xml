@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Settings>
+  <General>
+    <ExtractMode>Temp</ExtractMode>
+    <HideProgress>False</HideProgress>
+    <ProgressDisableCancel>True</ProgressDisableCancel>
+    <SelfDelete>True</SelfDelete>
+    <CompressStub>True</CompressStub>
+    <XPStyles>False</XPStyles>
+    <HideTitleIcon>False</HideTitleIcon>
+    <PromptShowSFXIcon>True</PromptShowSFXIcon>
+    <Overwrite>All</Overwrite>
+    <MessageBegin Show="True">Install FileMaker Pro 19?</MessageBegin>
+    <MessageCancel Show="False">Are you sure you want to cancel?</MessageCancel>
+    <MessageFinish Show="False">FileMaker Pro 13 Installer Starting...</MessageFinish>
+    <TitleText>FileMaker Pro 19.0.1.116</TitleText>
+    <ExtractPathText>Select extraction path</ExtractPathText>
+    <ExtractCancelText>Abort</ExtractCancelText>
+    <ExtractDialogText>Preparing to install FileMaker Pro 19...</ExtractDialogText>
+    <ExtractTitleText>Extracting</ExtractTitleText>
+    <ExtractShowIcon>False</ExtractShowIcon>
+    <ProgressPercent>1</ProgressPercent>
+    <ProgressShowIcon>True</ProgressShowIcon>
+    <Icon />
+  </General>
+  <Tasks>
+    <Item Enabled="True">RunProgram="\"%%T\\setup.exe\" /qn+ /norestart"</Item>
+  </Tasks>
+  <VersionString>
+    <Item Name="Comments" Value="" Enabled="False" />
+    <Item Name="CompanyName" Value="U of L - Clinical Trials Unit" Enabled="True" />
+    <Item Name="FileDescription" Value="FileMaker Pro 19 Installer" Enabled="True" />
+    <Item Name="FileVersion" Value="2020.08.19" Enabled="False" />
+    <Item Name="InternalName" Value="FMP19WIN" Enabled="True" />
+    <Item Name="LegalCopyright" Value="Copyright © 2005-2007 Oleg N. Scherbakov" Enabled="False" />
+    <Item Name="LegalTrademarks" Value="" Enabled="False" />
+    <Item Name="OriginalFilename" Value="7zSfxNew.exe" Enabled="False" />
+    <Item Name="PrivateBuild" Value="August 19, 2020" Enabled="True" />
+    <Item Name="ProductName" Value="FileMaker Pro 19" Enabled="True" />
+    <Item Name="ProductVersion" Value="19.0.1.116" Enabled="True" />
+    <Item Name="SpecialBuild" Value="" Enabled="False" />
+  </VersionString>
+</Settings>
