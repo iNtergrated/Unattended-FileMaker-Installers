@@ -27,13 +27,16 @@ FileMaker supports installing FileMaker with little to no human interaction, thi
 * [7-Zip SFX Maker](http://sourceforge.net/projects/sfx-maker/)
 
 1. Download and install 7-Zip: http://www.7-zip.org/
-2. Download 7-Zip SFX Maker: http://sourceforge.net/projects/sfx-maker/
+2. Download and install 7-Zip SFX Maker: http://sourceforge.net/projects/sfx-maker/
+    - Optional, [ResourceHacker](http://www.angusj.com/resourcehacker/), download the [zip install](http://www.angusj.com/resourcehacker/resource_hacker.zip).
+    - Double-click to open zip, and drag `ResourceHacker` to `C:\Program Files (x86)\7-Zip SFX Maker`.
+    - Rename `ResourceHacker` to `ResHacker`.
 3. Extract the FileMaker Installer/Archive provided by FileMaker, Inc.
-	* Right-Click on the FileMaker Installer (e.g. fmp_19.0.1.116_x64.exe)
+	* Right-click on the FileMaker Installer (e.g. fmp_19.0.1.116_x64.exe)
 	* Choose 7-Zip -> Extract Here
 4. Open the newly created folder (e.g. FileMaker Pro 19.0.1.116_x64 )
 5. Edit "Files/Assisted Install.txt", [About the personalization file](https://help.claris.com/en/pro-network-install-setup-guide/#personalization-file).
-6. Select the setup files (e.g. Extras, Files and Setup ), right-click, and choose 7-Zip -> Add to Archive.
+6. Go to the previous folder, select the setup files (e.g. Extras, Files and Setup ), right-click, and choose 7-Zip -> Add to Archive.
 
     ![Create Archive](https://cdn.intergrated.net/git.intergrated.net/unattended-file-maker-installers/01-create-archive.png)
 
@@ -41,13 +44,33 @@ FileMaker supports installing FileMaker with little to no human interaction, thi
 
     ![Configure Archive](https://cdn.intergrated.net/git.intergrated.net/unattended-file-maker-installers/02-configure-archive.png)
 
-7. Open 7-Zip SFX Maker (right-click, Run as administrator).
-8. *(optional)* Click "Load Settings..." and select the example config, "Example Config".
+8. Open 7-Zip SFX Maker (right-click, Run as administrator).
+9. *(optional)* Click "Load Settings..." and select the example config, "Example Config".
 	* [Download Example Configuration](FMP%207-Zip%20SFX%20Maker%20Config.xml)
 	* [Download Silent Install Example Configuration](FMP%207-Zip%20SFX%20Maker%20Config%20-%20Silent.xml)
-9. Under files add the archive you created in step 6
-10. Under dialogs, modify as needed.
-11. Under Metadata, modify as needed.
-12. Once you have customized the configuration, you may want to save a copy by clicking the "Save settings..." button.
+10. Go to files tab, click "+" to and select the archive you created in step 7.
+11. Go to the dialog tab.
+    1. Go to the *General* tab.
+        - Enter a title, e.g. `FileMaker Pro 19.0.1.116`
+        - Change any other settings as needed.
+    2. Go to the *Begin prompt* tab.
+        - Check *Begin prompt* box
+        - Enter a description, e.g. `Install FileMaker Pro 19?`
+    3. Go to the *ExtractPath* tab.
+        - Uncheck `Allow user to change path`
+    4. Go to the `Progress` tab.
+        - Change as needed.
+    5. Change any desired settings on the *Finish message* and *Cancel prompt* tabs.
+12. Go to the *Tasks* tab.
+    1. Click the `+`
+    2. Select `Run a program`.
+    3. Click `OK`.
+    4. In the *Run Program* Dialog, enter the following:
+        - Program: `%%T\setup.exe`
+        - Arguments: `/qb+ /norestart`
+    5. Click `OK`.
 
+12. Go to the *Metadata* tab, and make any desired changes.
+    > This does not appear to work.
+13. Once you have customized the configuration, you may want to save a copy by clicking the "Save settings..." button.
 13. Click "Make SFX" to build your Self-Extracting installer.
