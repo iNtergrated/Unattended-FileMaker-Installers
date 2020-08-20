@@ -43,8 +43,8 @@ FileMaker supports installing FileMaker with little to no human interaction, thi
 
 7. Open 7-Zip SFX Maker (right-click, Run as administrator).
 8. *(optional)* Click "Load Settings..." and select the example config, "Example Config".
-	* [Download Example Configuration](FMP 7-Zip SFX Maker Config.xml)
-	* [Download Silent Install Example Configuration](FMP 7-Zip SFX Maker Config - Silent.xml)
+	* [Download Example Configuration](FMP%207-Zip%20SFX%20Maker%20Config.xml)
+	* [Download Silent Install Example Configuration](FMP%207-Zip%20SFX%20Maker%20Config%20-%20Silent.xml")
 9. Under files add the archive you created in step 6
 10. Under dialogs, modify as needed.
 11. Under Metadata, modify as needed.
